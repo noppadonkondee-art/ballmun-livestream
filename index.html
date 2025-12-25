@@ -67,6 +67,25 @@ body{
     box-shadow:0 0 18px #f5c400;
 }
 
+/* ปุ่มย้อนกลับ */
+.back-btn{
+    width:90%;
+    max-width:420px;
+    margin:10px auto;
+}
+
+.back-btn button{
+    width:100%;
+    padding:12px;
+    border-radius:12px;
+    border:none;
+    background:#f5c400;
+    color:#000;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
 /* www.ballmun.com */
 .image-bar{
     width:90%;
@@ -120,36 +139,49 @@ body{
 
 <div class="bg-top">
 
-    <!-- LOGO เว็บ (ไม่ลิงก์ไปหน้าที่สอง) -->
+    <!-- LOGO -->
     <div class="header">
         <img src="https://img2.pic.in.th/pic/23a04a0f8ca705ff7.png">
     </div>
 
-    <!-- โลโก้ลีก (คลิกแล้วไปหน้าที่สอง) -->
+    <!-- โลโก้ลีก -->
     <div class="league-grid">
+
+        <!-- พรีเมียร์ลีก (หน้าในเว็บ) -->
         <a href="premier.html" class="league-btn">
             <img src="https://img5.pic.in.th/file/secure-sv1/Untitled-design-3566ef613caf88dc79.png">
         </a>
 
-        <a href="laliga.html" class="league-btn">
+        <!-- ลาลีก้า -->
+        <a href="https://www.laliga.com" target="_blank" class="league-btn">
             <img src="https://img5.pic.in.th/file/secure-sv1/Untitled-design-3566ef613caf88dc79.png">
         </a>
 
-        <a href="bundesliga.html" class="league-btn">
+        <!-- บุนเดสลีก้า -->
+        <a href="https://www.bundesliga.com" target="_blank" class="league-btn">
             <img src="https://img5.pic.in.th/file/secure-sv1/Untitled-design-3566ef613caf88dc79.png">
         </a>
 
-        <a href="seriea.html" class="league-btn">
+        <!-- เซเรียอา -->
+        <a href="https://www.legaseriea.it" target="_blank" class="league-btn">
             <img src="https://img5.pic.in.th/file/secure-sv1/Untitled-design-3566ef613caf88dc79.png">
         </a>
 
-        <a href="ligue1.html" class="league-btn">
+        <!-- ลีกเอิง (ถ้าต้องการ) -->
+        <a href="https://www.ligue1.com" target="_blank" class="league-btn">
             <img src="https://img5.pic.in.th/file/secure-sv1/Untitled-design-3566ef613caf88dc79.png">
         </a>
 
-        <a href="ucl.html" class="league-btn">
+        <!-- ยูฟ่า -->
+        <a href="https://www.uefa.com" target="_blank" class="league-btn">
             <img src="https://img5.pic.in.th/file/secure-sv1/Untitled-design-3566ef613caf88dc79.png">
         </a>
+
+    </div>
+
+    <!-- ปุ่มย้อนกลับ -->
+    <div class="back-btn">
+        <button onclick="history.back()">⬅ ย้อนกลับ</button>
     </div>
 
     <div class="image-bar">
