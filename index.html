@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BALLMUN ดูบอลสด</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    padding-bottom:70px;
+}
+
+/* ===== BACKGROUND TOP ===== */
+.bg-top{
+    background:url("https://img5.pic.in.th/file/secure-sv1/bgg9ef2b8bc11c9c5b1.png")
+    no-repeat center top / cover;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:30px 10px 10px;
+}
+
+.header img{
+    max-width:220px;
+}
+
+/* ===== GRID โลโก้ลีก ===== */
+.league-grid{
+    width:90%;
+    max-width:420px;
+    margin:10px auto 20px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+
+.league-btn{
+    aspect-ratio:1/1;
+    background:#fff;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    transition:.2s;
+}
+
+.league-btn img{
+    width:70%;
+    height:70%;
+    object-fit:contain;
+}
+
+.league-btn:hover{
+    transform:scale(1.06);
+    box-shadow:0 0 18px #f5c400;
+}
+
+/* www.ballmun.com */
+.image-bar{
+    width:90%;
+    max-width:420px;
+    margin:10px auto 0;
+}
+
+.image-bar img{
+    width:100%;
+}
+
+/* นักเตะ */
+.player-banner{
+    width:90%;
+    max-width:420px;
+    margin:5px auto 0;
+}
+
+.player-banner img{
+    width:100%;
+}
+
+/* ===== BOTTOM MENU ===== */
+.bottom-menu{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:#111;
+    display:flex;
+    justify-content:space-around;
+    padding:8px 0;
+    border-top:1px solid #333;
+}
+
+.bottom-item{
+    width:20%;
+    text-align:center;
+    font-size:12px;
+    color:#ccc;
+    text-decoration:none;
+}
+
+.bottom-item.home{
+    color:#f5c400;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-top">
+
+    <!-- LOGO -->
+    <div class="header">
+        <a href="index.html">
+            <img src="https://img2.pic.in.th/pic/23a04a0f8ca705ff7.png">
+        </a>
+    </div>
+
+    <!-- โลโก้ลีก -->
+    <div class="league-grid">
+        <a href="premier.html" class="league-btn"><img src="logo-premier.png"></a>
+        <a href="laliga.html" class="league-btn"><img src="logo-laliga.png"></a>
+        <a href="bundesliga.html" class="league-btn"><img src="logo-bundesliga.png"></a>
+        <a href="seriea.html" class="league-btn"><img src="logo-seriea.png"></a>
+        <a href="ligue1.html" class="league-btn"><img src="logo-ligue1.png"></a>
+        <a href="ucl.html" class="league-btn"><img src="logo-ucl.png"></a>
+    </div>
+
+    <div class="image-bar">
+        <img src="https://img5.pic.in.th/file/secure-sv1/Untitled-3f7247734d3154067.png">
+    </div>
+
+    <div class="player-banner">
+        <img src="https://img5.pic.in.th/file/secure-sv1/Blue-and-White-Modern-Sports-News-Instagram-Reel-10c44b8abd1349e51a.png">
+    </div>
+
+</div>
+
+<!-- BOTTOM -->
+<div class="bottom-menu">
+    <a href="#" class="bottom-item">⚽ โปรแกรม</a>
+    <a href="#" class="bottom-item">📰 ข่าว</a>
+    <a href="index.html" class="bottom-item home">🏠 หน้าแรก</a>
+    <a href="#" class="bottom-item">💋 18+</a>
+    <a href="#" class="bottom-item">💰 เดิมพัน</a>
+</div>
+
+</body>
+</html>
