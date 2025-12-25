@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -7,6 +6,12 @@
 <title>พรีเมียร์ลีก</title>
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
     background:#000;
     color:#fff;
@@ -22,12 +27,16 @@ body{
     max-width:160px;
 }
 
+/* กล่องรวม */
 .container{
     width:92%;
     max-width:420px;
     margin:auto;
+    display:flex;
+    flex-direction:column;
 }
 
+/* การ์ดแต่ละแมตช์ */
 .match{
     display:block;
     margin-bottom:14px;
@@ -38,6 +47,7 @@ body{
 
 .match img{
     width:100%;
+    display:block;
 }
 
 .match:hover{
@@ -45,14 +55,25 @@ body{
     box-shadow:0 0 15px #f5c400;
 }
 
+/* ปุ่มย้อนกลับ */
 .back{
     text-align:center;
-    margin:20px 0;
+    margin:30px 0 20px;
 }
 
 .back a{
+    display:inline-block;
+    padding:10px 20px;
+    border:1px solid #f5c400;
+    border-radius:30px;
     color:#f5c400;
     text-decoration:none;
+    font-size:16px;
+}
+
+.back a:hover{
+    background:#f5c400;
+    color:#000;
 }
 </style>
 </head>
@@ -64,23 +85,45 @@ body{
 </div>
 
 <div class="container">
-   <a href="#" class="match">
-    <img src="https://img5.pic.in.th/file/secure-sv1/ch1.png">
-</a>
 
-    <a href="#" class="match"><img src="pl2.png"></a>
-    <a href="#" class="match"><img src="pl3.png"></a>
-    <a href="#" class="match"><img src="pl4.png"></a>
-    <a href="#" class="match"><img src="pl5.png"></a>
-    <a href="#" class="match"><img src="pl6.png"></a>
-    <a href="#" class="match"><img src="pl7.png"></a>
-    <a href="#" class="match"><img src="pl8.png"></a>
+    <a href="https://ballmun.net/ch1" class="match" target="_blank">
+        <img src="https://img5.pic.in.th/file/secure-sv1/ch1.png">
+    </a>
+
+    <a href="https://ballmun.net/ch2" class="match" target="_blank">
+        <img src="https://img5.pic.in.th/file/secure-sv1/ch80ac72bf0c264ebf3.png">
+    </a>
+
+    <a href="https://ballmun.net/ch3" class="match" target="_blank">
+        <img src="https://img2.pic.in.th/pic/ch72cbad13dd9fe0a25.png">
+    </a>
+
+    <a href="https://ballmun.net/ch4" class="match" target="_blank">
+        <img src="https://img5.pic.in.th/file/secure-sv1/ch4.png">
+    </a>
+
+    <a href="https://ballmun.net/ch5" class="match" target="_blank">
+        <img src="https://img2.pic.in.th/pic/ch3ed347ada038f992e.png">
+    </a>
+
+    <a href="https://ballmun.net/ch6" class="match" target="_blank">
+        <img src="https://img2.pic.in.th/pic/ch6.png">
+    </a>
+
+    <a href="https://ballmun.net/ch7" class="match" target="_blank">
+        <img src="https://img5.pic.in.th/file/secure-sv1/ch55ed3f9370a34bde9.png">
+    </a>
+
+    <a href="https://ballmun.net/ch8" class="match" target="_blank">
+        <img src="https://img5.pic.in.th/file/secure-sv1/ch22e7e49b57d464dab.png">
+    </a>
+
 </div>
 
+<!-- ปุ่มย้อนกลับอยู่ตรงนี้ -->
 <div class="back">
     <a href="index.html">← กลับหน้าแรก</a>
 </div>
 
 </body>
 </html>
-
