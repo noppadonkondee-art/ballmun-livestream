@@ -6,68 +6,113 @@
 <title>พรีเมียร์ลีก</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{background:#000;color:#fff;font-family:Arial;}
-.header{text-align:center;padding:20px 20px 10px;}
-.header img{max-width:160px;}
-.live-buttons{
-    width:92%;max-width:420px;margin:10px auto 20px;
-    display:grid;grid-template-columns:repeat(2,1fr);gap:12px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-.live-buttons a{
-    display:flex;align-items:center;justify-content:center;gap:8px;
-    padding:14px 0;background:#111;border:2px solid #f5c400;
-    border-radius:14px;color:#f5c400;text-decoration:none;
-    font-size:18px;font-weight:bold;transition:.2s;
-}
-.live-buttons .emoji{width:22px;height:22px;}
-.live-buttons a:hover{background:#f5c400;color:#000;transform:scale(1.03);}
-.back{text-align:center;margin:30px 0 20px;}
-.back a{display:inline-block;padding:10px 20px;border:1px solid #f5c400;
-    border-radius:30px;color:#f5c400;text-decoration:none;font-size:16px;}
-.back a:hover{background:#f5c400;color:#000;}
-</style>
 
-<script>
-// ฟังก์ชันเปิดลิงก์ในเบราว์เซอร์ภายนอก
-function openExternal(url){
-    // ใช้ window.open
-    window.open(url, '_blank'); 
+body{
+    background:#000;
+    color:#fff;
+    font-family:Arial;
 }
-</script>
+
+.header{
+    text-align:center;
+    padding:20px 20px 10px;
+}
+
+.header img{
+    max-width:160px;
+}
+
+/* ====== ปุ่ม LIVE ====== */
+.live-buttons{
+    width:92%;
+    max-width:420px;
+    margin:10px auto 20px;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:12px;
+}
+
+.live-buttons a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:14px 0;
+    background:#111;
+    border:2px solid #f5c400;
+    border-radius:14px;
+    color:#f5c400;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    transition:.2s;
+}
+
+/* รูปอิโมจิ */
+.live-buttons .emoji{
+    width:22px;
+    height:22px;
+}
+
+/* hover effect */
+.live-buttons a:hover{
+    background:#f5c400;
+    color:#000;
+    transform:scale(1.03);
+}
+
+/* ปุ่มย้อนกลับ */
+.back{
+    text-align:center;
+    margin:30px 0 20px;
+}
+
+.back a{
+    display:inline-block;
+    padding:10px 20px;
+    border:1px solid #f5c400;
+    border-radius:30px;
+    color:#f5c400;
+    text-decoration:none;
+    font-size:16px;
+}
+
+.back a:hover{
+    background:#f5c400;
+    color:#000;
+}
+</style>
 </head>
 
 <body>
 
 <div class="header">
-    <img src="logo-premier.png" alt="Logo">
+    <img src="logo-premier.png">
 </div>
 
+<!-- ปุ่ม LIVE 1–16 -->
 <div class="live-buttons">
-    <a href="javascript:void(0);" onclick="openExternal('https://ballmun.net/ch1')">
-        <img src="https://img2.pic.in.th/Untitled-design-44.png" class="emoji"> LIVE 1
-    </a>
-    <a href="javascript:void(0);" onclick="openExternal('https://ballmun.net/ch2')">
-        <img src="https://img2.pic.in.th/Untitled-design-44.png" class="emoji"> LIVE 2
-    </a>
-    <a href="javascript:void(0);" onclick="openExternal('https://ballmun.net/ch3')">
-        <img src="https://img2.pic.in.th/Untitled-design-44.png" class="emoji"> LIVE 3
-    </a>
-    <a href="javascript:void(0);" onclick="openExternal('https://ballmun.net/ch4')">
-        <img src="https://img2.pic.in.th/Untitled-design-44.png" class="emoji"> LIVE 4
-    </a>
-    <a href="javascript:void(0);" onclick="openExternal('https://ballmun.net/ch5')">
-        <img src="https://img2.pic.in.th/Untitled-design-44.png" class="emoji"> LIVE 5
-    </a>
-    <a href="javascript:void(0);" onclick="openExternal('https://ballmun.net/ch6')">
-        <img src="https://img2.pic.in.th/Untitled-design-44.png" class="emoji"> LIVE 6
-    </a>
-    <a href="javascript:void(0);" onclick="openExternal('https://ballmun.net/ch7')">
-        <img src="https://img2.pic.in.th/Untitled-design-44.png" class="emoji"> LIVE 7
-    </a>
-    <a href="javascript:void(0);" onclick="openExternal('https://ballmun.net/ch8')">
-        <img src="https://img2.pic.in.th/Untitled-design-44.png" class="emoji"> LIVE 8
-    </a>
+    <a href="https://ballmun.net/ch1" target="_blank"><img src="https://img2.pic.in.th/Untitled-design-44.png" class="emoji"> LIVE 1</a>
+    <a href="https://t.me/+-qPl0uLG8M03MWM1" target="_blank"><img src="https://img5.pic.in.th/file/secure-sv1/Untitled-design-43d0bd0783300cb980.png" class="emoji"> LIVE 1</a>
+    <a href="https://ballmun.net/ch2" target="_blank"><img src="https://img2.pic.in.th/Untitled-design-44.png" class="emoji"> LIVE 2</a>
+    <a href="https://t.me/+ITt8sbza-09kNGY1" target="_blank"><img src="https://img5.pic.in.th/file/secure-sv1/Untitled-design-43d0bd0783300cb980.png" class="emoji"> LIVE 2</a>
+    <a href="https://ballmun.net/ch3" target="_blank"><img src="https://img2.pic.in.th/Untitled-design-44.png" class="emoji"> LIVE 3</a>
+    <a href="https://t.me/+psA_7dVlkqZjY2U1" target="_blank"><img src="https://img5.pic.in.th/file/secure-sv1/Untitled-design-43d0bd0783300cb980.png" class="emoji"> LIVE 4</a>
+    <a href="https://ballmun.net/ch4" target="_blank"><img src="https://img2.pic.in.th/Untitled-design-44.png" class="emoji"> LIVE 4</a>
+    <a href="https://t.me/+odps_nK0lJ4zMjE1" target="_blank"><img src="https://img5.pic.in.th/file/secure-sv1/Untitled-design-43d0bd0783300cb980.png" class="emoji"> LIVE 5</a>
+    <a href="https://ballmun.net/ch5" target="_blank"><img src="https://img2.pic.in.th/Untitled-design-44.png" class="emoji"> LIVE 5</a>
+    <a href="https://t.me/+CP52VDW-dewzMDk1" target="_blank"><img src="https://img5.pic.in.th/file/secure-sv1/Untitled-design-43d0bd0783300cb980.png" class="emoji"> LIVE 2</a>
+    <a href="https://ballmun.net/ch6" target="_blank"><img src="https://img2.pic.in.th/Untitled-design-44.png" class="emoji"> LIVE 6</a>
+    <a href="https://t.me/+O7cE4GhkR1A5Mjc1" target="_blank"><img src="https://img5.pic.in.th/file/secure-sv1/Untitled-design-43d0bd0783300cb980.png" class="emoji"> LIVE 6</a>
+    <a href="https://ballmun.net/ch7" target="_blank"><img src="https://img2.pic.in.th/Untitled-design-44.png" class="emoji"> LIVE 7</a>
+    <a href="https://t.me/+bzpT3YYu2CAwYjQ1" target="_blank"><img src="https://img5.pic.in.th/file/secure-sv1/Untitled-design-43d0bd0783300cb980.png" class="emoji"> LIVE 7</a>
+    <a href="https://ballmun.net/ch8" target="_blank"><img src="https://img2.pic.in.th/Untitled-design-44.png" class="emoji"> LIVE 8</a>
+    <a href="https://t.me/+I13CLMI5CSE0ODFl" target="_blank"><img src="https://img5.pic.in.th/file/secure-sv1/Untitled-design-43d0bd0783300cb980.png" class="emoji"> LIVE 8</a>
 </div>
 
 <div class="back">
