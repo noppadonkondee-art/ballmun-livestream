@@ -121,3 +121,184 @@ body{
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>LIVE CHAT POPUP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+    background:#000;
+    color:#fff;
+    min-height:200vh;
+}
+
+/* ปุ่มแชท */
+#chatBtn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#00ff7f;
+    color:#000;
+    padding:14px 20px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+    z-index:9999;
+    box-shadow:0 0 15px rgba(0,255,127,.8);
+}
+
+/* กล่องแชท */
+#chatBox{
+    position:fixed;
+    bottom:90px;
+    right:20px;
+    width:320px;
+    height:420px;
+    background:#111;
+    border-radius:12px;
+    display:none;
+    flex-direction:column;
+    z-index:9999;
+    box-shadow:0 0 20px rgba(0,255,127,.4);
+}
+
+/* หัวแชท (ลากได้) */
+#chatHeader{
+    background:#00ff7f;
+    color:#000;
+    padding:10px;
+    font-weight:bold;
+    cursor:move;
+    border-radius:12px 12px 0 0;
+}
+
+/* กล่องข้อความ */
+#messages{
+    flex:1;
+    padding:10px;
+    overflow-y:auto;
+    font-size:14px;
+}
+.msg{
+    margin-bottom:8px;
+}
+.user{
+    color:#00ff7f;
+}
+.system{
+    color:#999;
+    font-size:12px;
+}
+
+/* ช่องพิมพ์ */
+#chatInput{
+    display:flex;
+    border-top:1px solid #333;
+}
+#chatInput input{
+    flex:1;
+    padding:10px;
+    border:none;
+    outline:none;
+    background:#000;
+    color:#fff;
+}
+#chatInput button{
+    padding:10px 14px;
+    background:#00ff7f;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1 style="padding:20px;color:#00ff7f;">⚽ หน้าเว็บดูบอลสด (ตัวอย่าง)</h1>
+<p style="padding:0 20px;">เลื่อนเว็บได้ปกติ แชทเป็น popup ลอย</p>
+
+<!-- ปุ่มเปิดแชท -->
+<div id="chatBtn">💬 แชทสด</div>
+
+<!-- กล่องแชท -->
+<div id="chatBox">
+    <div id="chatHeader">⚽ LIVE CHAT</div>
+
+    <div id="messages">
+        <div class="msg system">ยินดีต้อนรับสู่แชทบอลสด</div>
+    </div>
+
+    <div id="chatInput">
+        <input id="msg" placeholder="พิมพ์ข้อความ..." autocomplete="off">
+        <button id="sendBtn">ส่ง</button>
+    </div>
+</div>
+
+<script>
+const chatBtn = document.getElementById("chatBtn");
+const chatBox = document.getElementById("chatBox");
+const messages = document.getElementById("messages");
+const msgInput = document.getElementById("msg");
+const sendBtn = document.getElementById("sendBtn");
+
+/* เปิด-ปิด popup */
+chatBtn.addEventListener("click", ()=>{
+    chatBox.style.display =
+        chatBox.style.display === "flex" ? "none" : "flex";
+});
+
+/* ส่งข้อความ */
+function send(){
+    const text = msgInput.value.trim();
+    if(text === "") return;
+
+    const div = document.createElement("div");
+    div.className = "msg user";
+    div.textContent = "คุณ: " + text;
+
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+    msgInput.value = "";
+}
+
+/* ปุ่มส่ง */
+sendBtn.addEventListener("click", send);
+
+/* กด Enter ส่ง */
+msgInput.addEventListener("keydown", e=>{
+    if(e.key === "Enter"){
+        send();
+    }
+});
+
+/* ลาก popup */
+let drag=false,x=0,y=0;
+const header=document.getElementById("chatHeader");
+
+header.addEventListener("mousedown", e=>{
+    drag=true;
+    x=e.clientX-chatBox.offsetLeft;
+    y=e.clientY-chatBox.offsetTop;
+});
+document.addEventListener("mousemove", e=>{
+    if(drag){
+        chatBox.style.left=(e.clientX-x)+"px";
+        chatBox.style.top=(e.clientY-y)+"px";
+        chatBox.style.right="auto";
+        chatBox.style.bottom="auto";
+    }
+});
+document.addEventListener("mouseup", ()=>drag=false);
+</script>
+
+</body>
+</html>
