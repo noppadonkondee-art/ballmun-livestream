@@ -17,7 +17,7 @@ body{
     color:#fff;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 .header{
     text-align:center;
     padding:20px 20px 10px;
@@ -26,7 +26,24 @@ body{
     max-width:160px;
 }
 
-/* ===== LIVE BUTTONS ===== */
+/* PLAYER */
+.player{
+    width:92%;
+    max-width:420px;
+    margin:10px auto 20px;
+    aspect-ratio:16/9;
+    background:#000;
+    border:2px solid #f5c400;
+    border-radius:16px;
+    overflow:hidden;
+}
+.player iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+
+/* LIVE BUTTONS */
 .live-buttons{
     width:92%;
     max-width:420px;
@@ -35,38 +52,45 @@ body{
     grid-template-columns:repeat(2,1fr);
     gap:12px;
 }
-.live-buttons a{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
+.live-btn{
     padding:14px 0;
     background:#111;
     border:2px solid #f5c400;
     border-radius:14px;
     color:#f5c400;
-    text-decoration:none;
-    font-size:17px;
     font-weight:bold;
+    cursor:pointer;
     transition:.2s;
+    text-align:center;
 }
-.live-buttons a:hover{
+.live-btn:hover{
     background:#f5c400;
     color:#000;
-    transform:scale(1.03);
+    transform:scale(1.04);
 }
-.live-buttons img{
-    width:18px;
+.tg-btn{
+    padding:14px 0;
+    background:#111;
+    border:2px solid #00ff7f;
+    border-radius:14px;
+    color:#00ff7f;
+    font-weight:bold;
+    text-align:center;
+    text-decoration:none;
+}
+.tg-btn img{
+    width:16px;
+    vertical-align:middle;
+    margin-right:6px;
 }
 
-/* ===== BACK ===== */
+/* BACK */
 .back{
     text-align:center;
     margin:30px 0 20px;
 }
 .back a{
-    display:inline-block;
-    padding:10px 20px;
+    padding:10px 22px;
     border:1px solid #f5c400;
     border-radius:30px;
     color:#f5c400;
@@ -75,72 +99,6 @@ body{
 .back a:hover{
     background:#f5c400;
     color:#000;
-}
-
-/* ===== CHAT BUTTON (TEXT) ===== */
-#chatBtn{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#00ff7f;
-    color:#000;
-    padding:14px 22px;
-    border-radius:30px;
-    cursor:pointer;
-    font-weight:bold;
-    z-index:9999;
-    box-shadow:0 0 18px rgba(0,255,127,.9);
-}
-
-/* ===== CHAT BOX ===== */
-#chatBox{
-    position:fixed;
-    bottom:90px;
-    right:20px;
-    width:320px;
-    height:420px;
-    background:#111;
-    border-radius:14px;
-    display:none;
-    flex-direction:column;
-    z-index:9999;
-    box-shadow:0 0 25px rgba(0,255,127,.5);
-}
-#chatHeader{
-    background:#00ff7f;
-    color:#000;
-    padding:10px;
-    font-weight:bold;
-    cursor:move;
-    border-radius:14px 14px 0 0;
-}
-#messages{
-    flex:1;
-    padding:10px;
-    overflow-y:auto;
-    font-size:14px;
-}
-.msg{margin-bottom:8px;}
-.user{color:#00ff7f;}
-.system{color:#999;font-size:12px;}
-#chatInput{
-    display:flex;
-    border-top:1px solid #333;
-}
-#chatInput input{
-    flex:1;
-    padding:10px;
-    border:none;
-    outline:none;
-    background:#000;
-    color:#fff;
-}
-#chatInput button{
-    padding:10px 16px;
-    background:#00ff7f;
-    border:none;
-    cursor:pointer;
-    font-weight:bold;
 }
 </style>
 </head>
@@ -151,116 +109,74 @@ body{
     <img src="logo-premier.png">
 </div>
 
-<!-- ===== LIVE BUTTONS ===== -->
+<!-- VIDEO PLAYER -->
+<div class="player">
+    <iframe id="player" src="" allowfullscreen></iframe>
+</div>
+
+<!-- LIVE BUTTONS -->
 <div class="live-buttons">
-    <!-- 1 -->
-    <a href="https://ballmun.net/ch1" target="_blank">🌐 LIVE 1</a>
-    <a href="https://t.me/+-qPl0uLG8M03MWM1" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"> LIVE 1
-    </a>
 
-    <!-- 2 -->
-    <a href="https://ballmun.net/ch2" target="_blank">🌐 LIVE 2</a>
-    <a href="https://t.me/+ITt8sbza-09kNGY1" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"> LIVE 2
-    </a>
+<div class="live-btn" data-link="https://ballmun.net/ch1">🌐 LIVE 1</div>
+<a class="tg-btn" href="https://t.me/xxx1" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">LIVE 1</a>
 
-    <!-- 3 -->
-    <a href="https://ballmun.net/ch3" target="_blank">🌐 LIVE 3</a>
-    <a href="https://t.me/+psA_7dVlkqZjY2U1" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"> LIVE 3
-    </a>
+<div class="live-btn" data-link="https://ballmun.net/ch2">🌐 LIVE 2</div>
+<a class="tg-btn" href="https://t.me/xxx2" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">LIVE 2</a>
 
-    <!-- 4 -->
-    <a href="https://ballmun.net/ch4" target="_blank">🌐 LIVE 4</a>
-    <a href="https://t.me/+odps_nK0lJ4zMjE1" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"> LIVE 4
-    </a>
+<div class="live-btn" data-link="https://ballmun.net/ch3">🌐 LIVE 3</div>
+<a class="tg-btn" href="https://t.me/xxx3" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">LIVE 3</a>
 
-    <!-- 5 -->
-    <a href="https://ballmun.net/ch5" target="_blank">🌐 LIVE 5</a>
-    <a href="https://t.me/+CP52VDW-dewzMDk1" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"> LIVE 5
-    </a>
+<div class="live-btn" data-link="https://ballmun.net/ch4">🌐 LIVE 4</div>
+<a class="tg-btn" href="https://t.me/xxx4" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">LIVE 4</a>
 
-    <!-- 6 -->
-    <a href="https://ballmun.net/ch6" target="_blank">🌐 LIVE 6</a>
-    <a href="https://t.me/+O7cE4GhkR1A5Mjc1" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"> LIVE 6
-    </a>
+<div class="live-btn" data-link="https://ballmun.net/ch5">🌐 LIVE 5</div>
+<a class="tg-btn" href="https://t.me/xxx5" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">LIVE 5</a>
 
-    <!-- 7 -->
-    <a href="https://ballmun.net/ch7" target="_blank">🌐 LIVE 7</a>
-    <a href="https://t.me/+bzpT3YYu2CAwYjQ1" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"> LIVE 7
-    </a>
+<div class="live-btn" data-link="https://ballmun.net/ch6">🌐 LIVE 6</div>
+<a class="tg-btn" href="https://t.me/xxx6" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">LIVE 6</a>
 
-    <!-- 8 -->
-    <a href="https://ballmun.net/ch8" target="_blank">🌐 LIVE 8</a>
-    <a href="https://t.me/+I13CLMI5CSE0ODFl" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"> LIVE 8
-    </a>
+<div class="live-btn" data-link="https://ballmun.net/ch7">🌐 LIVE 7</div>
+<a class="tg-btn" href="https://t.me/xxx7" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">LIVE 7</a>
+
+<div class="live-btn" data-link="https://ballmun.net/ch8">🌐 LIVE 8</div>
+<a class="tg-btn" href="https://t.me/xxx8" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">LIVE 8</a>
+
+<div class="live-btn" data-link="https://ballmun.net/ch9">🌐 LIVE 9</div>
+<a class="tg-btn" href="https://t.me/xxx9" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">LIVE 9</a>
+
+<div class="live-btn" data-link="https://ballmun.net/ch10">🌐 LIVE 10</div>
+<a class="tg-btn" href="https://t.me/xxx10" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">LIVE 10</a>
+
+<div class="live-btn" data-link="https://ballmun.net/ch11">🌐 LIVE 11</div>
+<a class="tg-btn" href="https://t.me/xxx11" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">LIVE 11</a>
+
+<div class="live-btn" data-link="https://ballmun.net/ch12">🌐 LIVE 12</div>
+<a class="tg-btn" href="https://t.me/xxx12" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">LIVE 12</a>
+
+<div class="live-btn" data-link="https://ballmun.net/ch13">🌐 LIVE 13</div>
+<a class="tg-btn" href="https://t.me/xxx13" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">LIVE 13</a>
+
+<div class="live-btn" data-link="https://ballmun.net/ch14">🌐 LIVE 14</div>
+<a class="tg-btn" href="https://t.me/xxx14" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">LIVE 14</a>
+
+<div class="live-btn" data-link="https://ballmun.net/ch15">🌐 LIVE 15</div>
+<a class="tg-btn" href="https://t.me/xxx15" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">LIVE 15</a>
+
+<div class="live-btn" data-link="https://ballmun.net/ch16">🌐 LIVE 16</div>
+<a class="tg-btn" href="https://t.me/xxx16" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">LIVE 16</a>
+
 </div>
 
 <div class="back">
     <a href="index.html">← กลับหน้าแรก</a>
 </div>
 
-<!-- ===== CHAT ===== -->
-<div id="chatBtn">💬 แชทสด</div>
-
-<div id="chatBox">
-    <div id="chatHeader">⚽ LIVE CHAT</div>
-    <div id="messages">
-        <div class="msg system">ยินดีต้อนรับสู่แชทบอลสด</div>
-    </div>
-    <div id="chatInput">
-        <input id="msg" placeholder="พิมพ์ข้อความ..." autocomplete="off">
-        <button id="sendBtn">ส่ง</button>
-    </div>
-</div>
-
 <script>
-const chatBtn=document.getElementById("chatBtn");
-const chatBox=document.getElementById("chatBox");
-const messages=document.getElementById("messages");
-const msg=document.getElementById("msg");
-const sendBtn=document.getElementById("sendBtn");
-
-chatBtn.onclick=()=>{
-    chatBox.style.display =
-    chatBox.style.display==="flex"?"none":"flex";
-};
-
-function send(){
-    if(!msg.value.trim())return;
-    const d=document.createElement("div");
-    d.className="msg user";
-    d.textContent="คุณ: "+msg.value;
-    messages.appendChild(d);
-    messages.scrollTop=messages.scrollHeight;
-    msg.value="";
-}
-sendBtn.onclick=send;
-msg.onkeydown=e=>{if(e.key==="Enter")send();};
-
-/* drag */
-let drag=false,x=0,y=0;
-const header=document.getElementById("chatHeader");
-header.onmousedown=e=>{
-    drag=true;
-    x=e.clientX-chatBox.offsetLeft;
-    y=e.clientY-chatBox.offsetTop;
-};
-document.onmousemove=e=>{
-    if(drag){
-        chatBox.style.left=(e.clientX-x)+"px";
-        chatBox.style.top=(e.clientY-y)+"px";
-        chatBox.style.right="auto";
-        chatBox.style.bottom="auto";
-    }
-};
-document.onmouseup=()=>drag=false;
+document.querySelectorAll(".live-btn").forEach(btn=>{
+    btn.onclick=()=>{
+        document.getElementById("player").src = btn.dataset.link;
+    };
+});
 </script>
 
 </body>
